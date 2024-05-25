@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Max and Min Temperature of the day</title>
+    </head>
+    <body>
+        <form id="temp">
+            <h1>MAXIMUM AND MINIMUM TEMPERATURE</h1>
+            <h4>First is Max Second is Min</h4>
+            <br>
+            Sunday:<input type="number" id="sun1">    <input type="number" id="sun1">   <br><br> 
+            Monday:<input type="number" id="mon1">    <input type="number" id="mon1">   <br><br>
+            Tuesday:<input type="number" id="tue1">   <input type="number" id="tue1">   <br><br>
+            Wenesday:<input type="number" id="wen1">  <input type="number" id="wen1">   <br><br>
+            Thursday:<input type="number" id="thu1">  <input type="number" id="thu1">   <br><br>
+            Friday:<input type="number" id="fri1">    <input type="number" id="fri1">   <br><br>
+            Saturday:<input type="number" id="sat1">  <input type="number" id="sat1">   <br><br>
+
+            <input type='submit' value="enter">
+            <br><br><br>
+            max temp:<input type="number" id="max">
+            min temp:<input type="number" id="min">
+        </form>
+        <script>
+            document.getElementById('temp').addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const sun1 = parseFloat(document.getElementById('sun1').value);
+                const sun2 = parseFloat(document.getElementById('sun1').value);
+                const mon1 = parseFloat(document.getElementById('mon1').value);
+                const mon2 = parseFloat(document.getElementById('mon1').value);
+                const tue1 = parseFloat(document.getElementById('tue1').value);
+                const tue2 = parseFloat(document.getElementById('tue1').value);
+                const wen1 = parseFloat(document.getElementById('wen1').value);
+                const wen2 = parseFloat(document.getElementById('wen1').value);
+                const thu1 = parseFloat(document.getElementById('thu1').value);
+                const thu2 = parseFloat(document.getElementById('thu1').value);
+                const fri1 = parseFloat(document.getElementById('fri1').value);
+                const fri2 = parseFloat(document.getElementById('fri1').value);
+                const sat1 = parseFloat(document.getElementById('sat1').value);
+                const sat2 = parseFloat(document.getElementById('sat1').value);
+
+                const maxTemp = Math.max(sun1, sun2, mon1, mon2, tue1, tue2, wen1, wen2, thu1, thu2, fri1, fri2, sat1, sat2);
+                const minTemp = Math.min(sun1, sun2, mon1, mon2, tue1, tue2, wen1, wen2, thu1, thu2, fri1, fri2, sat1, sat2);
+
+                document.getElementById('max').value = maxTemp;
+                document.getElementById('min').value = minTemp;
+            });
+        </script>
+    </body>
+</html>

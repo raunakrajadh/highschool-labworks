@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<form>
+<body>
+    <h2>principle: </h2><input type="number" id="p"required><br>
+    <h2>time: </h2><input type="number" id="t"required><br>
+    <h2>rate: </h2><input type="number" id="r"required><br><br>
+    <button onclick="cal()">enter</button><br>
+    <h2>simple interest : </h2> <input type="number" id="i">
+    <script>
+        function cal(){
+            var p,t,r,si;
+            p=parseInt(document.getElementById('p').value);
+            t=parseInt(document.getElementById('t').value);
+            r=parseInt(document.getElementById('r').value);
+            i = document.getElementById('i');
+            si=p*t*r/100;
+            i.value=si;
+        }
+    </script>
+</form>
+</body>
+</html>

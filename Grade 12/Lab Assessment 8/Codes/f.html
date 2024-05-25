@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form name="cal">
+        <p>first int:</p><input type="number" name="first"><br><br>
+        <p>second int:</p><input type="number" name="second"><br><br>
+        <p>third int:</p><input type="number" name="third"><br><br>
+        <input type="button" value="calculate sum" onclick="add()">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="calculate average" onclick="average()">
+        <p>SUM:</p><input type="number" name="s"><br><br>
+        <p>AVERAGE:</p><input type="number" name="av">
+    </form>
+    <script>
+        function add(){
+            var a=parseInt(document.cal.first.value);
+            var b=parseInt(document.cal.second.value);
+            var c=parseInt(document.cal.third.value);
+            document.cal.s.value=a+b+c;
+        }
+        function average(){
+            var a=parseInt(document.cal.first.value);
+            var b=parseInt(document.cal.second.value);
+            var c=parseInt(document.cal.third.value);
+            document.cal.av.value=((a+b+c)/3);
+        }
+    </script>
+</body>
+</html>

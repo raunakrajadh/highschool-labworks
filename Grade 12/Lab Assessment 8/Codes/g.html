@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="calc">
+        <p>first int:</p><input type="number" name="first"><br><br>
+        <p>second int:</p><input type="number" name="second"><br><br>
+        operator: <select name="ope">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select><br><br>
+        <input type="button" value="calculate" onclick="call()"><br><br>
+        <p>result:</p><input type="number" name="r">
+    </form>
+    <script>
+        function call(){
+            var a=parseInt(document.calc.first.value);
+            var b=parseInt(document.calc.second.value);
+            var op=document.calc.ope.value;
+            if(op=="+")
+            {
+                document.calc.r.value=a+b ;
+            }
+            if(op=="-")
+            {
+                document.calc.r.value=a-b ;
+            }
+            if(op=="*")
+            {
+                document.calc.r.value=a*b ;
+            }
+            if(op=="/")
+            {
+                document.calc.r.value=a/b ;
+            }
+            if(op=="%")
+            {
+                document.calc.r.value=a%b ;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head><title>Question j.</title></head>
+<body></body>
+<script>
+    let people = {name: [], age: []};
+
+    for(var i=0; i<3; i++){
+        people.name[i] = prompt("Enter name for person " + parseInt(i+1));
+        people.age[i] = prompt("Enter age for person " + parseInt(i+1));
+    }
+
+    document.write("Among:<br>")
+    for(var i=0; i<3; i++){
+        document.write(people.age[i] + " years old " + people.name[i] + "<br>");
+    }
+
+    let a = seniorPerson(people);
+    document.write("<br>The oldest person is " + people.name[a] + " who is " + people.age[a] + " years old!");
+
+    function seniorPerson(people){
+        let g = people.age[0];
+        for(var i=0; i<3; i++){
+            if(g<people.age[i]){
+                g=people.age[i];
+            }
+        }
+        return (people.age.indexOf(g));
+    }
+</script>
+</html>

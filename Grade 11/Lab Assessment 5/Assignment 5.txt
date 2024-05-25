@@ -1,0 +1,917 @@
+1. write a C program to read the following numbers and find out the sum and average, -123, 23, 100, 200, 30, 400, 2000, 3452, 34, -1234, 234, 231, 400, 24
+
+#include <stdio.h>
+
+int main()
+{
+int num[12] = {-123, 23, 100, 200, 30, 400, 2000, 3452, 34, -1234, 234, 231};
+int sum = 0;
+float avg;
+
+for (int i = 0; i < 12; i++)
+{
+sum += num[i];
+}
+
+avg = (float)sum / 12;
+
+printf("Sum of the numbers: %d\n", sum);
+printf("Average of the numbers: %.2f\n", avg);
+
+return 0;
+}
+
+
+2. write a c program to read the follow numbers and find out maximum value, -123, 23, 100, 200, 30, 400, 2000, 3452, 34, -1234, 234, 231, 400, 24
+
+#include <stdio.h>
+
+int main()
+{
+int nums[] = {-123, 23, 100, 200, 30, 400, 2000, 3452, 34, -1234, 234, 231, 400, 24};
+int max = nums[0];
+int i;
+for (i = 1; i < 14; i++)
+{
+if (nums[i] > max)
+{
+max = nums[i];
+}
+}
+printf("The maximum value is %d", max);
+return 0;
+}
+
+
+3. write a c program to read the following numbers and find out minimum, -123, 23, 100, 200, 30, 400, 2000, 3452, 34, -1234, 234, 231, 400, 24
+
+#include <stdio.h>
+
+int main()
+{
+int nums[] = {-123, 23, 100, 200, 30, 400, 2000, 3452, 34, -1234, 234, 231, 400, 24};
+int min = nums[0];
+int i;
+
+for (i = 1; i < 14; i++)
+{
+if (nums[i] < min)
+{
+min = nums[i];
+}
+}
+
+printf("Minimum number is: %d", min);
+
+return 0;
+}
+
+
+4. write a c program to read 15 different numbers supplied by a user and find the sum and average of them
+
+#include <stdio.h>
+
+int main()
+{
+int i, num, sum = 0;
+float avg;
+
+printf("Enter 15 different numbers: \n");
+
+for(i=1; i<=15; i++)
+{
+scanf("%d", &num);
+sum += num;
+}
+
+avg = (float)sum/15;
+
+printf("Sum of 15 numbers = %d\n", sum);
+printf("Average of 15 numbers = %.2f\n", avg);
+
+return 0;
+}
+
+
+5. write a c program to read 12 different numbers supplied by a user and find the maximum value among them
+
+#include <stdio.h>
+
+int main()
+{
+int num[12], max;
+printf("Enter 12 numbers: \n");
+for (int i = 0; i < 12; i++)
+{
+scanf("%d", &num[i]);
+}
+max = num[0];
+for (int i = 1; i < 12; i++)
+{
+if (num[i] > max)
+{
+max = num[i];
+}
+}
+printf("The maximum value is %d\n", max);
+return 0;
+}
+
+
+6. write a c program to read 20 different numbers supplied by a user and find minimum value among them
+
+#include <stdio.h>
+
+int main()
+{
+int i, num, min;
+
+printf("Enter 20 different numbers: \n");
+scanf("%d", &num);
+min = num;
+
+for(i=1; i<20; i++)
+{
+scanf("%d", &num);
+if(num < min)
+{
+min = num;
+}
+}
+
+printf("Minimum value among the numbers is: %d", min);
+
+return 0;
+}
+
+
+7. write a c program to read n different numbers supplied by a user and find the summ and average of them
+
+#include <stdio.h>
+
+int main()
+{
+int n, i;
+float num[100], sum = 0.0, average;
+
+printf("Enter the numbers of elements: ");
+scanf("%d", &n);
+
+while (n > 100 || n <= 0)
+{
+printf("Error! number should in range of (1 to 100).\n");
+printf("Enter the number again: ");
+scanf("%d", &n);
+}
+
+for(i = 0; i < n; ++i)
+{
+printf("%d. Enter number: ", i+1);
+scanf("%f", &num[i]);
+sum += num[i];
+}
+
+average = sum / n;
+printf("Average = %.2f", average);
+return 0;
+}
+
+
+8. write a c program to read n different numbers supplied by a user and find the maxumum value among them
+
+#include <stdio.h>
+
+int main()
+{
+int n, i;
+int max = 0;
+printf("Enter the number of elements: ");
+scanf("%d", &n);
+int arr[n];
+printf("Enter %d elements: \n", n);
+for(i = 0; i < n; i++)
+{
+scanf("%d", &arr[i]);
+if(arr[i] > max)
+{
+max = arr[i];
+}
+}
+printf("Maximum element is %d", max);
+return 0;
+}
+
+
+9. write a c program to read n different number supplied by a user and find the minimum value among them
+
+#include <stdio.h>
+
+int main()
+{
+int n, i;
+int min;
+printf("Enter the number of elements: ");
+scanf("%d", &n);
+int arr[n];
+printf("Enter the elements: \n");
+for(i=0; i<n; i++)
+{
+scanf("%d", &arr[i]);
+}
+min = arr[0];
+for(i=1; i<n; i++)
+{
+if(arr[i] < min)
+{
+min = arr[i];
+}
+}
+printf("Minimum element is %d", min);
+return 0;
+}
+
+
+10. write a c program, which reads following numbers and sort them in ascending order. 100, 234, 200, 30, 400, 23, 433, 234, -123, 24, 234, 144, 543, 32
+
+#include <stdio.h>
+
+int main()
+{
+int numbers[13] = {100, 234, 200, 30, 400, 23, 433, 234, -123, 24, 234, 144, 543};
+int i, j, temp;
+
+// sorting the numbers in ascending order
+for (i = 0; i < 13; i++)
+{
+for (j = i + 1; j < 13; j++)
+{
+if (numbers[i] > numbers[j])
+{
+temp = numbers[i];
+numbers[i] = numbers[j];
+numbers[j] = temp;
+}
+}
+}
+
+// printing the sorted numbers
+printf("Sorted numbers in ascending order: \n");
+for (i = 0; i < 13; i++)
+{
+printf("%d\n", numbers[i]);
+}
+
+return 0;
+}
+
+
+11. write a c program, which reads following numbers and sort them in descending order. 100, 234, 200, 30, 400, 23, 433, 234, -123, 24, 234, 144, 543, 32
+
+#include <stdio.h>
+
+int main()
+{
+int numbers[13] = {100, 234, 200, 30, 400, 23, 433, 234, -123, 24, 234, 144, 543};
+int i, j, temp;
+
+// sorting the array in descending order
+for (i = 0; i < 13; i++)
+{
+for (j = i + 1; j < 13; j++)
+{
+if (numbers[i] < numbers[j])
+{
+temp = numbers[i];
+numbers[i] = numbers[j];
+numbers[j] = temp;
+}
+}
+}
+
+// printing the sorted array
+printf("Sorted array in descending order: \n");
+for (i = 0; i < 13; i++)
+{
+printf("%d\n", numbers[i]);
+}
+
+return 0;
+}
+
+
+12. write a c program, which reads following numbers and find the median value. 100, 234, 200, 30, 400, 23, 433, 234, -123, 24, 234, 144, 543, 32
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int arr[13] = {100, 234, 200, 30, 400, 23, 433, 234, -123, 24, 234, 144, 543};
+int i, j, temp;
+int median;
+
+// sorting the array
+for (i = 0; i < 13; i++)
+{
+for (j = i + 1; j < 13; j++)
+{
+if (arr[i] > arr[j])
+{
+temp = arr[i];
+arr[i] = arr[j];
+arr[j] = temp;
+}
+}
+}
+
+// calculating the median
+if (13 % 2 == 0)
+{
+median = (arr[6] + arr[7]) / 2;
+}
+else
+{
+median = arr[6];
+}
+
+printf("The median value is %d", median);
+
+return 0;
+}
+
+
+13. write a c program, which accepts any 20 different numbers and find out the sum, average, the largest and the smallest value among them.
+
+#include<stdio.h>
+
+int main()
+{
+int i, n, sum = 0, largest, smallest;
+float avg;
+int arr[20];
+
+printf("Enter the number of elements in the array: ");
+scanf("%d", &n);
+
+printf("Enter the elements of the array: \n");
+for(i=0; i<n; i++)
+{
+scanf("%d", &arr[i]);
+}
+
+// Calculating the sum of the elements
+for(i=0; i<n; i++)
+{
+sum = sum + arr[i];
+}
+
+// Calculating the average of the elements
+avg = (float)sum/n;
+
+// Finding the largest element
+largest = arr[0];
+for(i=1; i<n; i++)
+{
+if(largest < arr[i])
+largest = arr[i];
+}
+
+// Finding the smallest element
+smallest = arr[0];
+for(i=1; i<n; i++)
+{
+if(smallest > arr[i])
+smallest = arr[i];
+}
+
+printf("Sum of the elements: %d\n", sum);
+printf("Average of the elements: %.2f\n", avg);
+printf("Largest element: %d\n", largest);
+printf("Smallest element: %d\n", smallest);
+
+return 0;
+}
+
+
+14. write a c program, which accepts n different number and arrange them in ascending order.
+
+#include <stdio.h>
+
+int main()
+{
+int n, i, j, temp;
+printf("Enter the number of elements: ");
+scanf("%d", &n);
+int arr[n];
+printf("Enter %d elements: \n", n);
+for(i=0; i<n; i++)
+{
+scanf("%d", &arr[i]);
+}
+for(i=0; i<n; i++)
+{
+for(j=i+1; j<n; j++)
+{
+if(arr[i] > arr[j])
+{
+temp = arr[i];
+arr[i] = arr[j];
+arr[j] = temp;
+}
+}
+}
+printf("The elements in ascending order are: \n");
+for(i=0; i<n; i++)
+{
+printf("%d\n", arr[i]);
+}
+return 0;
+}
+
+
+15. write a c program, which accepts n different number and arrange them in descending order
+
+#include<stdio.h>
+
+int main()
+{
+int n, i, j, temp;
+printf("Enter the number of elements: ");
+scanf("%d", &n);
+int arr[n];
+printf("Enter the elements: \n");
+for(i=0; i<n; i++)
+{
+scanf("%d", &arr[i]);
+}
+for(i=0; i<n; i++)
+{
+for(j=i+1; j<n; j++)
+{
+if(arr[i] < arr[j])
+{
+temp = arr[i];
+arr[i] = arr[j];
+arr[j] = temp;
+}
+}
+}
+printf("The elements in descending order are: \n");
+for(i=0; i<n; i++)
+{
+printf("%d\n", arr[i]);
+}
+return 0;
+}
+
+
+16. write a c program, which asks you to input any 15 different numbers and sort them in ascending order.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j, temp, arr[15];
+
+printf("Please enter 15 different numbers: \n");
+
+// Input 15 numbers
+for (i = 0; i < 15; i++)
+{
+scanf("%d", &arr[i]);
+}
+
+// Sort the numbers in ascending order
+for (i = 0; i < 15; i++)
+{
+for (j = i + 1; j < 15; j++)
+{
+if (arr[i] > arr[j])
+{
+temp = arr[i];
+arr[i] = arr[j];
+arr[j] = temp;
+}
+}
+}
+
+// Print the sorted numbers
+printf("The numbers in ascending order are: \n");
+for (i = 0; i < 15; i++)
+{
+printf("%d ", arr[i]);
+}
+
+return 0;
+}
+
+
+17. write a c program, which asks you to input any 25 different numbers and sort them in descending order.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j, temp, arr[25];
+
+printf("Enter 25 different numbers: \n");
+
+// Input 25 numbers
+for (i = 0; i < 25; i++)
+{
+scanf("%d", &arr[i]);
+}
+
+// Sort the numbers in descending order
+for (i = 0; i < 24; i++)
+{
+for (j = i + 1; j < 25; j++)
+{
+if (arr[i] < arr[j])
+{
+temp = arr[i];
+arr[i] = arr[j];
+arr[j] = temp;
+}
+}
+}
+
+// Print the sorted numbers
+printf("Sorted numbers in descending order: \n");
+for (i = 0; i < 25; i++)
+{
+printf("%d\n", arr[i]);
+}
+
+return 0;
+}
+
+
+18. write a c program, which asks you to input any 25 different numbers and find the median value
+
+#include <stdio.h>
+
+int main()
+{
+int num[25], i, j, temp;
+float median;
+
+printf("Enter 25 different numbers: \n");
+
+// Store numbers entered by the user
+for (i = 0; i < 25; ++i)
+{
+scanf("%d", &num[i]);
+}
+
+// Sort the numbers in ascending order
+for (i = 0; i < 25; ++i)
+{
+for (j = i + 1; j < 25; ++j)
+{
+if (num[i] > num[j])
+{
+temp = num[i];
+num[i] = num[j];
+num[j] = temp;
+}
+}
+}
+
+// Calculate the median
+if (25 % 2 == 0)
+{
+median = (num[12] + num[13]) / 2.0;
+}
+else
+{
+median = num[12];
+}
+
+printf("Median = %.2f", median);
+
+return 0;
+}
+
+
+19. write a c program, which accepts any 20 different numbers and find out the total numbers of odd and even valued existed among them
+
+#include<stdio.h>
+int main()
+{
+int num[20], i, even = 0, odd = 0;
+printf("Enter 20 different numbers: \n");
+for(i=0; i<20; i++)
+{
+scanf("%d", &num[i]);
+if(num[i]%2 == 0)
+even++;
+else
+odd++;
+}
+printf("Total even numbers: %d\n", even);
+printf("Total odd numbers: %d\n", odd);
+return 0;
+}
+
+
+20. write a c program, which accepts n different numbers and find the total number of values which are divisible by 3 or 5.
+
+#include<stdio.h>
+int main()
+{
+int n,i,count=0;
+printf("Enter the number of elements: ");
+scanf("%d",&n);
+int arr[n];
+printf("Enter the elements: \n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&arr[i]);
+if(arr[i]%3==0 || arr[i]%5==0)
+count++;
+}
+printf("The total number of values which are divisible by 3 or 5 is %d",count);
+return 0;
+}
+
+
+21. write a c program, which accepts n different numbers and count and display all the prime numbers among them
+
+#include<stdio.h>
+int main()
+{
+int n,i,j,count=0;
+printf("Enter the number of elements: ");
+scanf("%d",&n);
+int a[n];
+printf("Enter the elements: ");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("The prime numbers are: ");
+for(i=0;i<n;i++)
+{
+count=0;
+for(j=1;j<=a[i];j++)
+{
+if(a[i]%j==0)
+{
+count++;
+}
+}
+if(count==2)
+{
+printf("%d ",a[i]);
+}
+}
+return 0;
+}
+
+
+22. write a c program to accept n different numbers and find out the frequency of each value in the given number range.
+
+#include<stdio.h>
+
+int main()
+{
+int n, i, j, count;
+printf("Enter the number of elements: ");
+scanf("%d", &n);
+int arr[n];
+printf("Enter the elements: ");
+for(i=0; i<n; i++)
+{
+scanf("%d", &arr[i]);
+}
+printf("\nFrequency of each value in the given number range: \n");
+for(i=0; i<n; i++)
+{
+count = 1;
+for(j=i+1; j<n; j++)
+{
+if(arr[i]==arr[j])
+{
+count++;
+arr[j] = -1;
+}
+}
+if(arr[i]!=-1)
+{
+printf("%d occurs %d times\n", arr[i], count);
+}
+}
+return 0;
+}
+
+
+23. Write a C program to read the following two 3 x 3 matrices and find the sum matrix [1,2,3  4,5,6  7,8,9]  [10,20,30  40,50,60  70,80,90]
+
+#include <stdio.h>
+
+int main()
+{
+int a[3][3], b[3][3], c[3][3], i, j;
+
+printf("Enter elements of first matrix\n");
+for (i = 0; i < 3; i++)
+{
+for (j = 0; j < 3; j++)
+{
+scanf("%d", &a[i][j]);
+}
+}
+
+printf("Enter elements of second matrix\n");
+for (i = 0; i < 3; i++)
+{
+for (j = 0; j < 3; j++)
+{
+scanf("%d", &b[i][j]);
+}
+}
+
+printf("Sum of the matrices:\n");
+for (i = 0; i < 3; i++)
+{
+for (j = 0; j < 3; j++)
+{
+c[i][j] = a[i][j] + b[i][j];
+printf("%d\t", c[i][j]);
+}
+printf("\n");
+}
+
+return 0;
+}
+
+
+24. write a C program to read the table of following numbers and calculate the horizontal and vertical total Row-1:[34,54,67,100,?], Row-2:[-45,20,123,122,?], Row-3:[200,34,44,25,?], Row-4:[?,?,?,?,?]
+
+#include<stdio.h>
+int main()
+{
+int row1[5] = {34,54,67,100,0};
+int row2[5] = {-45,20,123,122,0};
+int row3[5] = {200,34,44,25,0};
+int row4[5] = {0,0,0,0,0};
+int i, sum1=0, sum2=0, sum3=0, sum4=0;
+
+//Calculating the horizontal total
+for(i=0; i<5; i++)
+{
+sum1 += row1[i];
+sum2 += row2[i];
+sum3 += row3[i];
+sum4 += row4[i];
+}
+row1[4] = sum1;
+row2[4] = sum2;
+row3[4] = sum3;
+row4[4] = sum4;
+
+//Calculating the vertical total
+for(i=0; i<5; i++)
+{
+row4[i] = row1[i] + row2[i] + row3[i] + row4[i];
+}
+
+//Printing the table
+printf("Row-1: [%d, %d, %d, %d, %d]\n", row1[0], row1[1], row1[2], row1[3], row1[4]);
+printf("Row-2: [%d, %d, %d, %d, %d]\n", row2[0], row2[1], row2[2], row2[3], row2[4]);
+printf("Row-3: [%d, %d, %d, %d, %d]\n", row3[0], row3[1], row3[2], row3[3], row3[4]);
+printf("Row-4: [%d, %d, %d, %d, %d]\n", row4[0], row4[1], row4[2], row4[3], row4[4]);
+
+return 0;
+}
+
+
+25. Write a c program, which reads the following sales chart and calculate the day wise and item wise total. Day:[SUN, MON, TUE, WED, THU, FRI], LUX:[1000,400,300,350,600,1000], SOALTEE:[2000,1200,200,150,500,2300], RIN:[1300,200,500,600,700,500], TOTAL:[?,?,?,?,?,?], ROW-8:TOTAL[?,?,?,?]
+
+#include<stdio.h>
+int main()
+{
+int lux[6] = {1000,400,300,350,600,1000},
+soaltee[6] = {2000,1200,200,150,500,2300},
+rin[6] = {1300,200,500,600,700,500},
+total[6] = {0,0,0,0,0,0},
+row8[4] = {0,0,0,0},
+i;
+
+for(i=0;i<6;i++)
+{
+total[i]=lux[i]+soaltee[i]+rin[i];
+}
+
+row8[0] = lux[0] + lux[1] + lux[2] + lux[3] + lux[4] + lux[5];
+row8[1] = lux[0] + lux[1] + lux[2] + lux[3] + lux[4] + lux[5];
+row8[2] = soaltee[0] + soaltee[1] + soaltee[2] + soaltee[3] + soaltee[4] + soaltee[5];
+row8[3] = total[0] + total[1] + total[2] + total[3] + total[4] + total[5];
+	
+row8[0]=total[0]+total[1]+total[2];
+row8[1]=total[3]+total[4]+total[5];
+row8[2]=total[0]+total[3];
+row8[3]=total[1]+total[4];
+
+printf("Day\tLUX\tSOALTEE\tRIN\tTOTAL\n");
+for(i=0;i<6;i++)
+{
+printf("%d\t%d\t%d\t%d\t%d\n",i+1,lux[i],soaltee[i],rin[i],total[i]);
+}
+printf("Total\t%d\t%d\t%d\t%d\n",row8[0],row8[1],row8[2],row8[3]);
+return 0;
+}
+
+
+26. Write a C program to ask a user for supplying elements of two different 3x3 matrices and calculate their sum matrix.
+#include <stdio.h>
+
+int main()
+{
+int a[3][3], b[3][3], c[3][3], i, j;
+
+printf("Enter elements of first matrix\n");
+for (i = 0; i < 3; i++)
+{
+for (j = 0; j < 3; j++)
+{
+scanf("%d", &a[i][j]);
+}
+}
+
+printf("Enter elements of second matrix\n");
+for (i = 0; i < 3; i++)
+{
+for (j = 0; j < 3; j++)
+{
+scanf("%d", &b[i][j]);
+}
+}
+
+printf("Sum of the matrices:\n");
+for (i = 0; i < 3; i++)
+{
+for (j = 0; j < 3; j++)
+{
+c[i][j] = a[i][j] + b[i][j];
+printf("%d\t", c[i][j]);
+}
+printf("\n");
+}
+
+return 0;
+}
+
+
+27. Write a c program that reads two matrices A[]M x N and B[]M x N and add them as C(i,j) = A(i,j) + B(i,j).
+
+#include <stdio.h>
+
+int main()
+{
+int m, n, i, j;
+printf("Enter the size of the matrices (m x n): ");
+scanf("%d %d", &m, &n);
+
+int A[m][n], B[m][n], C[m][n];
+
+printf("Enter the elements of matrix A:\n");
+for (i = 0; i < m; i++)
+{
+for (j = 0; j < n; j++)
+{
+scanf("%d", &A[i][j]);
+}
+}
+
+printf("Enter the elements of matrix B:\n");
+for (i = 0; i < m; i++)
+{
+for (j = 0; j < n; j++)
+{
+scanf("%d", &B[i][j]);
+}
+}
+
+// Adding the matrices
+for (i = 0; i < m; i++)
+{
+for (j = 0; j < n; j++)
+{
+C[i][j] = A[i][j] + B[i][j];
+}
+}
+
+printf("The sum of the matrices is:\n");
+for (i = 0; i < m; i++)
+{
+for (j = 0; j < n; j++)
+{
+printf("%d ", C[i][j]);
+}
+printf("\n");
+}
+
+return 0;
+}

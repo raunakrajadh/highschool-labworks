@@ -1,0 +1,18 @@
+<html>
+<head><title>Question g.</title></head>
+<body></body>
+<script>
+    var howMany = prompt("How many numbers?");
+    let numbers = [];
+    for(let i=1; i<=parseInt(howMany); i++){
+        numbers[i-1] = prompt("Enter number ("+i+")");
+    }
+    var max = numbers[0];
+    for(let i=1; i<numbers.length; i++){
+        if(numbers[i] > max){
+            max=numbers[i];
+        }
+    }
+    document.write("The maximum among " + numbers + " is " + max);
+</script>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head><title>Question d.</title></head>
+<body></body>
+<script>
+    var a = prompt("Enter number (1)");
+    var b = prompt("Enter number (2)");
+    var c = prompt("Enter number (3)");
+
+    let array = [a,b,c]
+
+    var max = Math.max(a,b,c);
+    var min = Math.min(a,b,c);
+    var median = array.filter((a) => a != max && a != min)
+
+    document.write("Among "+a+","+b+","+c+", the maximum is " + max + " and the minimum is " + min + " and the median is " + median);
+</script>
+</html>

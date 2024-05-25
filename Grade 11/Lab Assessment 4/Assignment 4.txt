@@ -1,0 +1,633 @@
+2. Answer the following questions.
+a. Define nested loop. Give its importance in program development
+A nested loop is a loop within a loop. It is a type of loop that is used when a program needs to repeat a set of instructions multiple times. The inner loop will run each time the outer loop runs. This allows the program to perform multiple iterations of the same set of instructions.
+
+b. What is switching? Highlight its advantages
+Switch cases in C are a type of control statement that allows a program to execute different code depending on the value of a given expression. It is a type of selection control statement that allows a program to execute different code depending on the value of a given expression.
+
+Advantages of switch cases in C:
+1. It is easier to read and understand than a series of if-else statements.
+2. It is more efficient than a series of if-else statements, as it only needs to evaluate the expression once.
+3. It allows for more concise code, as multiple cases can be handled with a single statement.
+4. It allows for more flexibility, as the cases can be easily changed or added.
+
+
+3. Write a C program to display the numeric pattern like (use nested loop).
+a. 
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=1; i<=5; i++)
+{
+for(j=1; j<=i; j++)
+{
+printf("%d ", j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+b.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=5; i>=1; i--)
+{
+for(j=1; j<=i; j++)
+{
+printf("%d ", j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+c.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=5; i>=1; i--)
+{
+for(j=5; j>=i; j--)
+{
+printf("%d ", j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+d.
+
+#include <stdio.h>
+
+int main()
+{
+int i,j;
+
+for(i=1; i<=5; i++)
+{	
+for(j=5; j>=i; j--)
+{
+printf("%d ", j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+e.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=1; i<=5; i++)
+{
+for(j=1; j<=i; j++)
+{
+printf("%d ", i);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+f.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=5; i>=1; i--)
+{
+for(j=1; j<=i; j++)
+{
+printf("%d ", i);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+g.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for (i = 3; i <= 15; i += 3) {
+for (j = i; j <= i + 12; j += 3)
+printf("%d ", j);
+printf("\n");
+}
+return 0;
+}
+
+
+h.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=1; i<=5; i++)
+{
+for(j=1; j<=i; j++)
+{
+printf("%d ", 2*j-1);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+i.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+
+for(i=5; i>=1; i--)
+{
+for(j=1; j<=i; j++)
+{
+printf("%d ", (2*j-1));
+}
+printf("\n");
+}
+
+return 0;
+}
+
+
+j.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=1; i<=4; i++)
+{
+for(j=1; j<=i; j++)
+{
+printf("%d ", 2*j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+k.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+
+for(i=4; i>=1; i--)
+{
+for(j=1; j<=i; j++)
+{
+printf("%d", 2*j);
+}
+printf("\n");
+}
+
+return 0;
+}
+
+
+l.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=1; i<=4; i++)
+{
+for(j=i; j<=i+3; j++)
+{
+printf("%d ", j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+m.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=1; i<=4; i++)
+{
+for(j=1; j<=5; j++)
+{
+printf("%d ", i*j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+n.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=1; i<=5; i++)
+{
+for(j=1; j<=i; j++)
+{
+printf("%c ", 64+j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+o.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=5; i>=1; i--)
+{
+for(j=1; j<=i; j++)
+{
+printf("%c ", 64+j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+p.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=5; i<=30; i+=5)
+{
+if(i!=15){
+for(j=i; j<i+25; j+=5)
+{
+printf("%d ", j);
+}
+printf("\n");
+}
+}
+return 0;
+}
+
+
+q.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+for(i=1; i<=8; i=i*2)
+{
+for(j=1; j<=5; j++)
+{
+printf("%d\t", i*j);
+}
+printf("\n");
+}
+return 0;
+}
+
+
+4. To display the multiplication table fo 1 to 10 with 10 multiples of each.
+
+#include <stdio.h>
+
+int main()
+{
+int i, j;
+
+printf("Multiplication Table from 1 to 10\n\n");
+
+for(i=1; i<=10; i++)
+{
+for(j=1; j<=10; j++)
+{
+printf("%d x %d = %d\n", i, j, i*j);
+}
+printf("\n");
+}
+
+return 0;
+}
+
+
+5.
+
+#include <stdio.h>
+
+int main()
+{
+int choice;
+float length, breadth, height;
+float area, volume, total_surface_area;
+
+printf("Please enter your choice:\n");
+printf("1. Calculate area of 4 walls of a room\n");
+printf("2. Calculate volume of a cuboid\n");
+printf("3. Calculate total surface area of a room\n");
+scanf("%d", &choice);
+
+switch(choice)
+{
+case 1:
+printf("Please enter the length, breadth and height of the room:\n");
+scanf("%f %f %f", &length, &breadth, &height);
+area = 2 * (length * height + breadth * height);
+printf("The area of 4 walls of the room is %.2f\n", area);
+break;
+case 2:
+printf("Please enter the length, breadth and height of the cuboid:\n");
+scanf("%f %f %f", &length, &breadth, &height);
+volume = length * breadth * height;
+printf("The volume of the cuboid is %.2f\n", volume);
+break;
+case 3:
+printf("Please enter the length, breadth and height of the room:\n");
+scanf("%f %f %f", &length, &breadth, &height);
+total_surface_area = 2 * (length * breadth + breadth * height + height * length);
+printf("The total surface area of the room is %.2f\n", total_surface_area);
+break;
+default:
+printf("Invalid choice!\n");
+break;
+}
+
+return 0;
+}
+
+
+6.
+
+#include <stdio.h>
+
+int main()
+{
+int choice;
+float temp, fahrenheit, celcius;
+
+printf("Choose the conversion type:\n");
+printf("1. Celsius to Fahrenheit\n");
+printf("2. Fahrenheit to Celsius\n");
+scanf("%d", &choice);
+
+switch(choice)
+{
+case 1:
+printf("Enter temperature in Celsius: ");
+scanf("%f", &temp);
+fahrenheit = (temp * 9/5) + 32;
+printf("Temperature in Fahrenheit: %.2f\n", fahrenheit);
+break;
+case 2:
+printf("Enter temperature in Fahrenheit: ");
+scanf("%f", &temp);
+celcius = (temp - 32) * 5/9;
+printf("Temperature in Celsius: %.2f\n", celcius);
+break;
+default:
+printf("Invalid Choice\n");
+}
+
+return 0;
+}
+
+
+7.
+
+#include <stdio.h>
+
+int main()
+{
+int num1, num2, num3, choice;
+printf("Enter three numbers: ");
+scanf("%d %d %d", &num1, &num2, &num3);
+printf("Enter your choice: \n1. Find largest value\n2. Find smallest value\n3. Find median value\n");
+scanf("%d", &choice);
+switch(choice)
+{
+case 1:
+if(num1 > num2 && num1 > num3)
+printf("Largest value is %d", num1);
+else if(num2 > num1 && num2 > num3)
+printf("Largest value is %d", num2);
+else
+printf("Largest value is %d", num3);
+break;
+case 2:
+if(num1 < num2 && num1 < num3)
+printf("Smallest value is %d", num1);
+else if(num2 < num1 && num2 < num3)
+printf("Smallest value is %d", num2);
+else
+printf("Smallest value is %d", num3);
+break;
+case 3:
+if((num1 > num2 && num1 < num3) || (num1 > num3 && num1 < num2))
+printf("Median value is %d", num1);
+else if((num2 > num1 && num2 < num3) || (num2 > num3 && num2 < num1))
+printf("Median value is %d", num2);
+else
+printf("Median value is %d", num3);
+break;
+default:
+printf("Invalid choice");
+}
+return 0;
+}
+
+
+8.
+
+#include <stdio.h>
+
+int main()
+{
+char color;
+printf("Choose your favorite color: \n");
+printf("Press R for Red\n");
+printf("Press G for Green\n");
+printf("Press B for Blue\n");
+printf("Press Y for Yellow\n");
+scanf("%c", &color);
+
+switch(color)
+{
+case 'R':
+case 'r':
+printf("You have chosen Red Color\n");
+break;
+case 'G':
+case 'g':
+printf("You have chosen Green Color\n");
+break;
+case 'B':
+case 'b':
+printf("You have chosen Blue Color\n");
+break;
+case 'Y':
+case 'y':
+printf("You have chosen Yellow Color\n");
+break;
+default:
+printf("Invalid Choice\n");
+break;
+}
+return 0;
+}
+
+
+9.
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+int choice;
+float radius, volume, area, circumference;
+
+printf("Please enter your choice:\n");
+printf("1. Calculate volume of a sphere\n");
+printf("2. Calculate area of a sphere\n");
+printf("3. Calculate circumference of a sphere\n");
+scanf("%d", &choice);
+
+printf("Please enter the radius of the sphere: ");
+scanf("%f", &radius);
+
+switch(choice)
+{
+case 1:
+volume = (4.0/3.0) * M_PI * pow(radius, 3);
+printf("The volume of the sphere is %f\n", volume);
+break;
+case 2:
+area = 4 * M_PI * pow(radius, 2);
+printf("The area of the sphere is %f\n", area);
+break;
+case 3:
+circumference = 2 * M_PI * radius;
+printf("The circumference of the sphere is %f\n", circumference);
+break;
+default:
+printf("Invalid choice!\n");
+break;
+}
+
+return 0;
+}
+
+
+10.
+
+#include <stdio.h>
+int main()
+{
+int num, i, flag = 0;
+int rem, temp, sum = 0;
+int rev = 0;
+printf("Enter a positive integer: ");
+scanf("%d", &num);
+int choice;
+printf("Enter your choice: \n1. Prime or Composite \n2. Palindromic or Not \n3. Armstrong or Not \n");
+scanf("%d", &choice);
+switch (choice)
+{
+case 1:
+for (i = 2; i <= num / 2; ++i)
+{
+if (num % i == 0)
+{
+flag = 1;
+break;
+}
+}
+if (flag == 0)
+printf("%d is a prime number.", num);
+else
+printf("%d is not a prime number.", num);
+break;
+case 2:
+temp = num;
+while (temp != 0)
+{
+rem = temp % 10;
+rev = rev * 10 + rem;
+temp /= 10;
+}
+if (rev == num)
+printf("%d is a palindromic number.", num);
+else
+printf("%d is not a palindromic number.", num);
+break;
+case 3:
+temp = num;
+while (temp != 0)
+{
+rem = temp % 10;
+sum += rem * rem * rem;
+temp /= 10;
+}
+if (sum == num)
+printf("%d is an Armstrong number.", num);
+else
+printf("%d is not an Armstrong number.", num);
+break;
+default:
+printf("Invalid Choice");
+}
+return 0;
+}
+

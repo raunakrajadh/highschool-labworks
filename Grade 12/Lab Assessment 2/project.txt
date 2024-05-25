@@ -1,0 +1,53 @@
+create database school;
+
+use school;
+
+create table stud_info (Regno int, Name char(25), Class int, Gender char(1), Address char(25), PRIMARY KEY(Regno));
+
+insert into stud_info values
+(80001,"RAUNAK RAJ ADHIKARI", 12 ,"M","LALITPUR"),
+(80002,"RAMESH K.C", 12, "M", "KATHMANDU"),
+(80003,"RAMA SHRESTHA", 12, "F", "LALITPUR"),
+(80004,"ANAND SHAKYA", 12, "M", "LALITPUR"),
+(80005,"SHITAL BHANDARI", 12, "M", "KATHMANDU"),
+(80006,"ABIN THAPA", 12, "M", "BHAKTAPUR"),
+(80007,"SITA MAHAJAN", 12, "M", "BHAKTAPUR"),
+(80008,"RITA K.C", 12, "F", "LALITPUR"),
+(80009,"BIMALA LAKHEY", 12, "F", "BHAKTAPUR"),
+(80010,"RAMAN SUBEDI", 12, "M", "KATHMANDU"),
+(80011,"SHANTI KATUWAL", 12, "F", "BHAKTAPUR"),
+(80012,"RAUNAK RAJ ADHIKARI", 12 ,"M","LALITPUR");
+
+select * from stud_info where address="lalitpur";
+select * from stud_info where gender="F";
+select * from stud_info where gender="M" and address="KATHMANDU";
+select * from stud_info where address="BHAKTAPUR" or address="LALITPUR";
+select * from stud_info where Name like "R%";
+select * from stud_info where Name like "%A";
+select * from stud_info where Regno>80004 and Regno<80008;
+select * from stud_info order by Name;
+
+alter table stud_info add dob date;
+alter table stud_info add check (regno>80000);
+
+update stud_info set dob="2005-09-23"where regno=80001;
+update stud_info set dob="2006-03-01"where regno=80002;
+update stud_info set dob="2007-01-21"where regno=80003;
+update stud_info set dob="2006-11-01"where regno=80004;
+update stud_info set dob="2005-03-10"where regno=80005;
+update stud_info set dob="2004-07-15"where regno=80006;
+update stud_info set dob="2005-12-31"where regno=80007;
+update stud_info set dob="2006-08-25"where regno=80008;
+update stud_info set dob="2007-09-05"where regno=80009;
+update stud_info set dob="2005-03-11"where regno=80010;
+update stud_info set dob="2004-11-18"where regno=80011;
+update stud_info set dob="2005-09-23"where regno=80012;
+
+select * from stud_info where year(dob)=2005;
+select * from stud_info where year(dob)=2006 and month(dob)=03;
+select Regno, Name, dob from stud_info;
+update stud_info set dob="2005-10-25" where Regno=80007;
+select * from stud_info where (year(sysdate())-year(dob))<=18;
+select * from stud_info where address="KATHMANDU" and year(dob)=2005;
+delete from stud_info where Regno=80012;
+select * from stud_info;

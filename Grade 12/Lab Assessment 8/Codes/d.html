@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="cal">
+        Fahrenheit: <input type="number" name="f">
+        <br><br>
+        <input type="button" value="calculate" onclick="cen()">
+        <br><br><br>
+        Celcius: <input type="number" name="c">
+    </form>
+    <script>
+        function cen(){
+            var f;
+            f=parseInt(document.cal.f.value);
+            document.cal.c.value=(5/9*(f-32)).toFixed(2);
+        }
+    </script>
+</body>
+</html>

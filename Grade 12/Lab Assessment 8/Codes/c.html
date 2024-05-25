@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <img src="1.png" width="250px" height="200px" onmouseover="enlarge(0)" onmouseout="unlarge(0)">
+    <img src="2.jpeg" width="250px" height="200px" onmouseover="enlarge(1)" onmouseout="unlarge(1)">
+    <img src="3.png" width="250px" height="200px" onmouseover="enlarge(2)" onmouseout="unlarge(2)">
+    <img src="4.jpg" width="250px" height="200px" onmouseover="enlarge(3)" onmouseout="unlarge(3)">
+</body>
+<script>
+    function enlarge(id){
+        var image=document.getElementsByTagName("img")[id];
+        image.height=600;
+        image.width=400;
+    }
+    function unlarge(id){
+        var image=document.getElementsByTagName("img")[id];
+        image.height=200;
+        image.width=250;
+    }
+</script>
+</html>

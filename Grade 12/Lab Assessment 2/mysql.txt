@@ -1,0 +1,33 @@
+4)
+a. To display all the records from the table students.
+= select * from students;
+
+b. To display all the records of only girl stuents.
+= select * from students where gender="F";
+
+c. To display all the records of students who are from KATHMANDU.
+= select * from students where address="KATHMANDU";
+
+d. To display all the students records whose name begins wth the letter "R". 
+= select * from students where student_name like "R%";
+
+e. To display all the students whose name ended with the letter "A". 
+= select * from students where student_name like "%A";
+
+f. To list all the students detail whose name is having the second character "A". 
+= select * from students where student_name like "_A%";
+
+g. To display all the students records whose name is having the second letter "A" and are from KATHMANDU only. 
+= select * from students where student_name like "_A%" and address="KATHMANDU";
+
+h. To display the information of students whos ename is having second last letter "A". 
+= select * from students where student_name like "%A_";
+
+i. Change the address of RAMA K.C. whose student_id is 80004 into KATHMANDU. 
+update students set address="KATHMANDU" where student_id=80004;
+
+j. The student_id of RISHAV KHANAL should be 80010. Correct Accordingly. 
+= update students set student_id=80010 where student_name="RISHAV KHANAL";
+
+k. Remove the record of RAMA K.C. whose d is 80004 from the database.
+= delete from students where student_id=80004;

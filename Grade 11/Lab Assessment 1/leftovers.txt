@@ -1,0 +1,7 @@
+
+
+22. An electricity board charges the following rates from domestic users of electricity. unit consumed Rate per unit in Rs. unit consumed upto 50 Rs. O above 100 Rate per unit in Rs. Rs. 6 51 to 100 Rs. 4 The meter charge (compulsory) is Rs. 150.00. 13% of the amount for the sum of compulsory charge and amount for the consumption of electricity is calculated as VAT (Value Added Tax), Rs 150 is charged compulsorily as the maintenance cost. Total bill amount = meter charge+ amount for unit consumption+VAT +maintenance cost. Find the total bill amount paid by user if the units consumed is given through billamt(). [HINT: Use INPUT statement for supplying the total units consumed by the user.]
+
+23. Write a program to find the commission earned by a sales from the following data through commcald): Value of sales commission Upto Rs. 10000 8% Between Rs 10000 and Rs. 20000 10% Rs. 20000 and above 12%
+
+24. Nepal Telecommunication corporation charges the following rates for local calls from a customer: First 100 calls : FREE 101 to 200 calls Rs. 2.00 per call above 200 calls : Rs. 4.00 per call The compulsory charge is Rs. 150. 13% of the total cost is charged as VAT. 10% of the total cost is charged as telephone service charge. Write a program to find the total bill amount paid by the customer, if the total number of local calls is input from the keyboard through.. [total bill amount =sum of all the charges].
